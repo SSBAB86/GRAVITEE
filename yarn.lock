@@ -1511,6 +1511,11 @@
   resolved "https://registry.yarnpkg.com/@gar/promisify/-/promisify-1.1.3.tgz#555193ab2e3bb3b6adc3d551c9c030d9e860daf6"
   integrity sha512-k2Ty1JcVojjJFwrg/ThKi2ujJ7XNLYaFGNB/bWT9wGR+oSMJHMa5w+CUq6p/pVrKeNNgA7pCqEcjSnHVoqJQFw==
 
+"@gwhitney/detect-indent@7.0.1":
+  version "7.0.1"
+  resolved "https://registry.yarnpkg.com/@gwhitney/detect-indent/-/detect-indent-7.0.1.tgz#db16d7fe6d13b26dc792442e5156677b44cc428e"
+  integrity sha512-7bQW+gkKa2kKZPeJf6+c6gFK9ARxQfn+FKy9ScTBppyKRWH2KzsmweXUoklqeEiHiNVWaeP5csIdsNq6w7QhzA==
+
 "@humanwhocodes/config-array@^0.11.6":
   version "0.11.7"
   resolved "https://registry.yarnpkg.com/@humanwhocodes/config-array/-/config-array-0.11.7.tgz#38aec044c6c828f6ed51d5d7ae3d9b9faf6dbb0f"
@@ -2334,16 +2339,17 @@
   dependencies:
     graceful-fs "^4.2.6"
 
-"@pnpm/read-project-manifest@4.0.1":
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/@pnpm/read-project-manifest/-/read-project-manifest-4.0.1.tgz#1eb6f9cb2e774587ebdabc7d2b3dafd24be8372c"
-  integrity sha512-+mf0hDMkqRi/nFikEHqNpm+MEYhB96e5QPucFTSMe049JEJ0Ux7vvWaEo2/cCLbedjrmA0tf3dagXNV228op+A==
+"@pnpm/read-project-manifest@4.1.1":
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/@pnpm/read-project-manifest/-/read-project-manifest-4.1.1.tgz#713ef14a42656e4af4fae29b3e7d88dca97f1b38"
+  integrity sha512-jGNoofG8kkUlgAMX8fqbUwRRXYf4WcWdvi/y1Sv1abUfcoVgXW6GdGVm0MIJ+enaong3hXHjaLl/AwmSj6O1Uw==
   dependencies:
+    "@gwhitney/detect-indent" "7.0.1"
     "@pnpm/error" "4.0.0"
     "@pnpm/graceful-fs" "2.0.0"
-    "@pnpm/types" "8.8.0"
-    "@pnpm/write-project-manifest" "4.0.1"
-    detect-indent "^6.1.0"
+    "@pnpm/text.comments-parser" "1.0.0"
+    "@pnpm/types" "8.9.0"
+    "@pnpm/write-project-manifest" "4.1.1"
     fast-deep-equal "^3.1.3"
     is-windows "^1.0.2"
     json5 "^2.2.1"
@@ -2352,19 +2358,32 @@
     sort-keys "^4.2.0"
     strip-bom "^4.0.0"
 
-"@pnpm/types@8.8.0":
-  version "8.8.0"
-  resolved "https://registry.yarnpkg.com/@pnpm/types/-/types-8.8.0.tgz#44129e77527475a6a9aad3e51bdd68db530382ad"
-  integrity sha512-IKUpbWRHDB9C4Yy4UeBpeYhU7eIsLj50jF5HNRUkbJnM0CWHPLxX9TGCI+ov8pgGeTP1t1g0GPDHD6en9D8LxQ==
-
-"@pnpm/write-project-manifest@4.0.1":
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/@pnpm/write-project-manifest/-/write-project-manifest-4.0.1.tgz#2993d18bbd1c3cc920dc50c0a16091e4591ddfc9"
-  integrity sha512-QG6t7EPhZB3pik7BA/Ngv6g95Ys5YNfD5nTpMXb7vSHU7PiBm9vL/vEctdOZKBGh6HBjKcGgdqV5RdGS/CAF6g==
+"@pnpm/text.comments-parser@1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@pnpm/text.comments-parser/-/text.comments-parser-1.0.0.tgz#68146400087c7946de8ddfea39b52a638e9eafe4"
+  integrity sha512-iG0qrFcObze3uK+HligvzaTocZKukqqIj1dC3NOH58NeMACUW1NUitSKBgeWuNIE4LJT3SPxnyLEBARMMcqVKA==
   dependencies:
-    "@pnpm/types" "8.8.0"
+    strip-comments-strings "1.2.0"
+
+"@pnpm/types@8.9.0":
+  version "8.9.0"
+  resolved "https://registry.yarnpkg.com/@pnpm/types/-/types-8.9.0.tgz#9636d5f0642793432f72609b79458ca9be049b02"
+  integrity sha512-3MYHYm8epnciApn6w5Fzx6sepawmsNU7l6lvIq+ER22/DPSrr83YMhU/EQWnf4lORn2YyiXFj0FJSyJzEtIGmw==
+
+"@pnpm/util.lex-comparator@1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@pnpm/util.lex-comparator/-/util.lex-comparator-1.0.0.tgz#6d17dad2f1a23e137fd38402b3a1419969e4d090"
+  integrity sha512-3aBQPHntVgk5AweBWZn+1I/fqZ9krK/w01197aYVkAJQGftb+BVWgEepxY5GChjSW12j52XX+CmfynYZ/p0DFQ==
+
+"@pnpm/write-project-manifest@4.1.1":
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/@pnpm/write-project-manifest/-/write-project-manifest-4.1.1.tgz#36419857db592578c2c5cf9fa1afae144dc727e2"
+  integrity sha512-nRqvPYO8xUVdgy/KhJuaCrWlVT/4uZr97Mpbuizsa6CmvtCQf3NuYnVvOOrpYiKUJcZYtEvm84OooJ8+lJytMQ==
+  dependencies:
+    "@pnpm/text.comments-parser" "1.0.0"
+    "@pnpm/types" "8.9.0"
     json5 "^2.2.1"
-    write-file-atomic "^4.0.2"
+    write-file-atomic "^5.0.0"
     write-yaml-file "^4.2.0"
 
 "@redis/bloom@1.0.2":
@@ -4392,7 +4411,7 @@ dequal@2.0.3:
   resolved "https://registry.yarnpkg.com/dequal/-/dequal-2.0.3.tgz#2644214f1997d39ed0ee0ece72335490a7ac67be"
   integrity sha512-0je+qPKHEMohvfRTCEo3CrPG6cAzAYgmzKyxRiYSSDkS6eGJdyVJm7WaYA5ECaAD9wLB2T4EEeymA5aFVcYXCA==
 
-detect-indent@6.1.0, detect-indent@^6.1.0:
+detect-indent@6.1.0:
   version "6.1.0"
   resolved "https://registry.yarnpkg.com/detect-indent/-/detect-indent-6.1.0.tgz#592485ebbbf6b3b1ab2be175c8393d04ca0d57e6"
   integrity sha512-reYkTUJAZb9gUuZ2RvVCNhVHdg62RHnJ7WJl8ftMi4diZ6NWlciOzQN88pUhSELEwflJht4oQDv0F0BMlwaYtA==
@@ -5084,13 +5103,14 @@ fill-range@^7.0.1:
   dependencies:
     to-regex-range "^5.0.1"
 
-find-packages@10.0.1:
-  version "10.0.1"
-  resolved "https://registry.yarnpkg.com/find-packages/-/find-packages-10.0.1.tgz#41b6a5aa149c382bf726126225dbccb3fd0680f9"
-  integrity sha512-v0IMSFBDZvfnEeqPTSodiKfJLcpCpP7wyIIzF/MYVHlPME64pKG0gQzOmmOVPzQkpgP5xZobPfEiAcibepumyA==
+find-packages@10.0.4:
+  version "10.0.4"
+  resolved "https://registry.yarnpkg.com/find-packages/-/find-packages-10.0.4.tgz#eccc08d5e121e501b34c6af2b8e43c87faa0073c"
+  integrity sha512-JmO9lEBUEYOiRw/bdbdgFWpGFgBZBGLcK/5GjQKo3ZN+zR6jmQOh9gWyZoqxlQmnldZ9WBWhna0QYyuq6BxvRg==
   dependencies:
-    "@pnpm/read-project-manifest" "4.0.1"
-    "@pnpm/types" "8.8.0"
+    "@pnpm/read-project-manifest" "4.1.1"
+    "@pnpm/types" "8.9.0"
+    "@pnpm/util.lex-comparator" "1.0.0"
     fast-glob "^3.2.12"
     p-filter "^2.1.0"
 
@@ -9135,6 +9155,11 @@ strip-bom@^4.0.0:
   resolved "https://registry.yarnpkg.com/strip-bom/-/strip-bom-4.0.0.tgz#9c3505c1db45bcedca3d9cf7a16f5c5aa3901878"
   integrity sha512-3xurFv5tEgii33Zi8Jtp55wEIILR9eh34FAW00PZf+JnSsTmV/ioewSgQl97JHvgjoRGwPShsWm+IdrxB35d0w==
 
+strip-comments-strings@1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/strip-comments-strings/-/strip-comments-strings-1.2.0.tgz#b19a1382e8f69a704ef61ad5069c29721c20aaad"
+  integrity sha512-zwF4bmnyEjZwRhaak9jUWNxc0DoeKBJ7lwSN/LEc8dQXZcUFG6auaaTQJokQWXopLdM3iTx01nQT8E4aL29DAQ==
+
 strip-final-newline@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/strip-final-newline/-/strip-final-newline-2.0.0.tgz#89b852fb2fcbe936f6f4b3187afb0a12c1ab58ad"
@@ -9838,10 +9863,18 @@ write-file-atomic@^3.0.3:
     signal-exit "^3.0.2"
     typedarray-to-buffer "^3.1.5"
 
-write-file-atomic@^4.0.0, write-file-atomic@^4.0.1, write-file-atomic@^4.0.2:
+write-file-atomic@^4.0.0, write-file-atomic@^4.0.1:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/write-file-atomic/-/write-file-atomic-4.0.2.tgz#a9df01ae5b77858a027fd2e80768ee433555fcfd"
   integrity sha512-7KxauUdBmSdWnmpaGFg+ppNjKF8uNLry8LyzjauQDOVONfFLNKrKvQOxZ/VuTIcS/gge/YNahf5RIIQWTSarlg==
+  dependencies:
+    imurmurhash "^0.1.4"
+    signal-exit "^3.0.7"
+
+write-file-atomic@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/write-file-atomic/-/write-file-atomic-5.0.0.tgz#54303f117e109bf3d540261125c8ea5a7320fab0"
+  integrity sha512-R7NYMnHSlV42K54lwY9lvW6MnSm1HSJqZL3xiSgi9E7//FYaI74r2G0rd+/X6VAMkHEdzxQaU5HUOXWUz5kA/w==
   dependencies:
     imurmurhash "^0.1.4"
     signal-exit "^3.0.7"
