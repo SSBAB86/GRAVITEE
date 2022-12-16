@@ -2412,17 +2412,17 @@
   dependencies:
     "@seald-io/nedb" "3.1.0"
 
-"@renovatebot/osv-offline@1.0.5":
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/@renovatebot/osv-offline/-/osv-offline-1.0.5.tgz#db9f7bbb7ca914993f3b2870624cf1998c27f5a3"
-  integrity sha512-OMopjg3+z47LbC2qz0oaG8d9rX3j3H9Ir2KN+YMcpiJNYTRgSw6MTf7o4rfAgSCsf+7AAWvvkGDZYvBix4eI7Q==
+"@renovatebot/osv-offline@1.0.8":
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/@renovatebot/osv-offline/-/osv-offline-1.0.8.tgz#d8a386c0614a24e00326f224e2bf6fc90df5a03c"
+  integrity sha512-oYryh9uttikbaYhcoiJn8DBMjgxbneu9NvVF5PnG7qrUDYr7KIrlxdOlo8vQ2iytT1qd8+VzOLDoJReu1EL1Ag==
   dependencies:
     "@octokit/rest" "19.0.5"
     "@renovatebot/osv-offline-db" "1.0.1"
     adm-zip "0.5.9"
     fs-extra "10.1.0"
-    got "11.8.5"
-    luxon "3.0.4"
+    got "11.8.6"
+    luxon "3.1.1"
 
 "@renovatebot/pep440@2.1.5":
   version "2.1.5"
@@ -5458,6 +5458,23 @@ got@11.8.5, got@^11.7.0:
     p-cancelable "^2.0.0"
     responselike "^2.0.0"
 
+got@11.8.6:
+  version "11.8.6"
+  resolved "https://registry.yarnpkg.com/got/-/got-11.8.6.tgz#276e827ead8772eddbcfc97170590b841823233a"
+  integrity sha512-6tfZ91bOr7bOXnK7PRDCGBLa1H4U080YHNaAQ2KsMGlLEzRbk44nsZF2E1IeRc3vtJHPVbKCYgdFbaGO2ljd8g==
+  dependencies:
+    "@sindresorhus/is" "^4.0.0"
+    "@szmarczak/http-timer" "^4.0.5"
+    "@types/cacheable-request" "^6.0.1"
+    "@types/responselike" "^1.0.0"
+    cacheable-lookup "^5.0.3"
+    cacheable-request "^7.0.2"
+    decompress-response "^6.0.0"
+    http2-wrapper "^1.0.0-beta.5.2"
+    lowercase-keys "^2.0.0"
+    p-cancelable "^2.0.0"
+    responselike "^2.0.0"
+
 graceful-fs@^4.1.2, graceful-fs@^4.1.6, graceful-fs@^4.2.0, graceful-fs@^4.2.10, graceful-fs@^4.2.4, graceful-fs@^4.2.6, graceful-fs@^4.2.9:
   version "4.2.10"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.10.tgz#147d3a006da4ca3ce14728c7aefc287c367d7a6c"
@@ -6919,6 +6936,11 @@ luxon@3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/luxon/-/luxon-3.0.4.tgz#d179e4e9f05e092241e7044f64aaa54796b03929"
   integrity sha512-aV48rGUwP/Vydn8HT+5cdr26YYQiUZ42NM6ToMoaGKwYfWbfLeRkEu1wXWMHBZT6+KyLfcbbtVcoQFCbbPjKlw==
+
+luxon@3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/luxon/-/luxon-3.1.1.tgz#b492c645b2474fb86f3bd3283213846b99c32c1e"
+  integrity sha512-Ah6DloGmvseB/pX1cAmjbFvyU/pKuwQMQqz7d0yvuDlVYLTs2WeDHQMpC8tGjm1da+BriHROW/OEIT/KfYg6xw==
 
 make-dir@^3.0.0:
   version "3.1.0"
